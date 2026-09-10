@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio de Saúde — Academia Personalizada em Natal/RN</title>
+<meta name="description" content="Academia para quem não gosta de academia. Treinos com horário agendado, turmas reduzidas e acompanhamento individual em Natal/RN. Desde 2021.">
+<meta property="og:title" content="Studio de Saúde — Academia Personalizada | Natal/RN">
+<meta property="og:description" content="Academia para quem não gosta de academia. Treinos com horário agendado, turmas reduzidas e acompanhamento individual.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='18' fill='%230a2a47'/%3E%3Cpath d='M32 46c-8-5.5-15-11-15-18.5C17 20.5 21 17 26 17c3.2 0 5.4 1.6 6 4.4h0c.6-2.8 2.8-4.4 6-4.4 5 0 9 3.5 9 10.5C47 35 40 40.5 32 46z' fill='%232e8fe8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="topo">
+  <div class="container header-inner">
+    <a class="brand" href="#topo" aria-label="Studio de Saúde — início">
+      <img class="brand-logo" src="img/logo.png" alt="Studio de Saúde">
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+      <a href="#proposta">A proposta</a>
+      <a href="#paraquem">Para quem é</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#espaco">O espaço</a>
+      <a href="#professor">Professor</a>
+      <a href="#comofunciona">Como funciona</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" data-wa href="https://wa.me/">Agendar aula experimental</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="dots" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Academia para quem <em>não gosta de academia</em>.</h1>
+
+        <p class="hero-lead">
+          Treinos com horário agendado, turmas reduzidas e acompanhamento individual para você se exercitar com segurança, tranquilidade e atenção de verdade.
+        </p>
+
+        <div class="hero-chips">
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Turmas reduzidas
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg>
+            Horário agendado
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            Acompanhamento individual
+          </span>
+        </div>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Agendar aula experimental
+          </a>
+        </div>
+
+        <p class="hero-aux">Venha conhecer o Studio de Saúde e experimentar uma forma diferente de treinar.</p>
+
+        <div class="hero-meta">
+          <div><strong>Natal/RN</strong>Atendimento local</div>
+          <div><strong>Desde 2021</strong>História que acompanha pessoas</div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="fx-photo">
+        <div class="photo parallax" data-src="img/hero.png" data-label="Professor Breno acompanhando um aluno durante o treino">
+          <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+          <span class="photo-label">Foto: Professor Breno acompanhando um aluno</span>
+        </div>
+        </div>
+        <article class="hero-badge">
+          <span class="icon-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
+          <div>
+            <strong>Horário agendado</strong>
+            <small>Você sabe exatamente quando vai treinar</small>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proposta">
+    <div class="container">
+      <div class="section-head reveal" style="--d:.05s">
+        <span class="sec-badge">A proposta</span>
+        <h2 class="sec-title">Aqui você não é apenas mais um aluno na academia.</h2>
+        <p class="sec-sub">
+          Nada de academia lotada, aparelhos disputados ou ficar tentando descobrir sozinho qual exercício fazer.
+          No Studio de Saúde, cada treino acontece com horário marcado, poucas pessoas no ambiente e acompanhamento próximo durante toda a atividade.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="card reveal" style="--d:.1s">
+          <span class="icon-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg>
+          </span>
+          <h3>Horário agendado</h3>
+          <p>Você sabe exatamente quando irá treinar e encontra um ambiente organizado para receber você.</p>
+        </article>
+        <article class="card reveal" style="--d:.2s">
+          <span class="icon-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <h3>Turmas reduzidas</h3>
+          <p>Poucas pessoas treinando ao mesmo tempo para proporcionar mais conforto e atenção.</p>
+        </article>
+        <article class="card reveal" style="--d:.3s">
+          <span class="icon-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+          </span>
+          <h3>Acompanhamento individualizado</h3>
+          <p>O professor acompanha sua execução, evolução e necessidades durante os exercícios.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="paraquem">
+    <div class="container">
+      <div class="section-head reveal" style="--d:.05s">
+        <span class="sec-badge">Para quem é</span>
+        <h2 class="sec-title">Talvez academia convencional nunca tenha combinado com você.</h2>
+        <p class="sec-sub">Se você se reconhece em alguma destas situações, este é o lugar onde você pode finalmente começar — do seu jeito.</p>
+      </div>
+
+      <div class="audience-grid">
+        <article class="card reveal" style="--d:.05s">
+          <span class="num">01</span>
+          <h3>Para quem está começando</h3>
+          <p>Você não precisa saber treinar antes de chegar aqui.</p>
+        </article>
+        <article class="card reveal" style="--d:.12s">
+          <span class="num">02</span>
+          <h3>Para quem é sedentário</h3>
+          <p>Começamos respeitando seu ritmo e suas condições atuais.</p>
+        </article>
+        <article class="card reveal" style="--d:.19s">
+          <span class="num">03</span>
+          <h3>Para terceira idade</h3>
+          <p>Exercícios acompanhados com atenção especial à execução e segurança.</p>
+        </article>
+        <article class="card reveal" style="--d:.26s">
+          <span class="num">04</span>
+          <h3>Para quem precisa de mais atenção</h3>
+          <p>Treinos adaptados para limitações, necessidades e objetivos individuais.</p>
+        </article>
+        <article class="card reveal" style="--d:.33s">
+          <span class="num">05</span>
+          <h3>Para quem não gosta de academia cheia</h3>
+          <p>Um ambiente tranquilo, organizado e com poucas pessoas.</p>
+        </article>
+        <article class="card card-muted reveal" style="--d:.4s">
+          <span class="num">06</span>
+          <h3>Para quem já tentou academia e desistiu</h3>
+          <p>Talvez o problema não fosse se exercitar. Talvez você apenas não tenha encontrado o ambiente certo.</p>
+        </article>
+      </div>
+
+      <figure class="audience-feature reveal">
+        <svg class="aff-quote" viewBox="0 0 24 24" width="40" height="40" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H7c0-1.7 1.3-3 3-3V7zm11 0h-4a3 3 0 0 0-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7z"/></svg>
+        <blockquote>Talvez o problema não fosse se exercitar.<br>Talvez você apenas não tenha encontrado o ambiente certo.</blockquote>
+        <figcaption>E talvez esse ambiente seja o Studio de Saúde.</figcaption>
+      </figure>
+
+      <div class="center reveal">
+        <a class="btn btn-primary" data-wa href="https://wa.me/">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Agendar aula experimental
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="emotion">
+    <div class="emotion-glow" aria-hidden="true"></div>
+    <div class="container emotion-inner">
+      <div class="emotion-copy reveal">
+        <span class="sec-badge sec-badge-light">O treino certo para você</span>
+        <h2>Você não precisa se adaptar à academia.<br>O treino precisa se adaptar <em>a você</em>.</h2>
+        <p>
+          Cada pessoa chega com uma história, uma condição física e um objetivo diferente.
+          Por isso, o acompanhamento no Studio de Saúde começa entendendo você — e não simplesmente entregando uma ficha de exercícios.
+        </p>
+        <div class="emotion-cta">
+          <a class="btn btn-light" data-wa href="https://wa.me/">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Vamos conversar
+          </a>
+        </div>
+      </div>
+      <div class="emotion-media fx-photo reveal" style="--d:.15s">
+        <div class="photo parallax" data-src="img/aula-real.jpg" data-label="Uma aula real no Studio de Saúde">
+          <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+          <span class="photo-label">Foto: aula real no Studio de Saúde</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="depoimentos">
+    <div class="container">
+      <div class="section-head reveal" style="--d:.05s">
+        <span class="sec-badge">Depoimentos</span>
+        <h2 class="sec-title">Histórias reais de quem encontrou uma nova forma de se exercitar.</h2>
+        <p class="sec-sub">Palavras de quem viveu a experiência do Studio de Saúde na própria rotina.</p>
+      </div>
+
+      <article class="testimonial-featured reveal">
+        <div class="tf-aside">
+          <span class="sec-badge">Relato em destaque</span>
+          <p class="tf-title">Encontrar o exercício certo pode transformar o que antes parecia impossível.</p>
+          <p class="tf-note">Depoimento de uma aluna que convive com fibromialgia e encontrou uma nova relação com a atividade física.</p>
+        </div>
+        <div class="tf-body">
+          <svg class="tf-quote" viewBox="0 0 24 24" width="44" height="44" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H7c0-1.7 1.3-3 3-3V7zm11 0h-4a3 3 0 0 0-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7z"/></svg>
+          <blockquote class="t-placeholder">[ Inserir aqui o depoimento real da aluna sobre a experiência com fibromialgia e o acompanhamento no Studio de Saúde. ]</blockquote>
+          <cite>Aluna do Studio de Saúde · nome a confirmar</cite>
+          <p class="tf-disclaimer">Experiência pessoal relatada pela aluna. Este relato não representa promessa de tratamento, diagnóstico ou cura.</p>
+        </div>
+      </article>
+
+      <div class="tgrid">
+        <article class="card tcard reveal" style="--d:.1s">
+          <span class="tq-icon" aria-hidden="true"></span>
+          <blockquote class="t-placeholder">[ Depoimento real — aguardando texto ]</blockquote>
+          <cite>Aluno(a) do Studio de Saúde</cite>
+        </article>
+        <article class="card tcard reveal" style="--d:.2s">
+          <span class="tq-icon" aria-hidden="true"></span>
+          <blockquote class="t-placeholder">[ Depoimento real — aguardando texto ]</blockquote>
+          <cite>Aluno(a) do Studio de Saúde</cite>
+        </article>
+        <article class="card tcard reveal" style="--d:.3s">
+          <span class="tq-icon" aria-hidden="true"></span>
+          <blockquote class="t-placeholder">[ Depoimento real — aguardando texto ]</blockquote>
+          <cite>Aluno(a) do Studio de Saúde</cite>
+        </article>
+      </div>
+
+      <p class="tfoot-note reveal">* Depoimentos reais de alunos do Studio de Saúde. Nomes preservados conforme autorização.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="espaco">
+    <div class="container">
+      <div class="section-head reveal" style="--d:.05s">
+        <span class="sec-badge">O espaço</span>
+        <h2 class="sec-title">Um espaço pensado para você se sentir confortável.</h2>
+        <p class="sec-sub">Organizado, tranquilo e preparado para receber poucas pessoas por horário.</p>
+      </div>
+
+      <div class="mosaic">
+        <figure class="fx-photo reveal" style="--d:.05s">
+          <div class="photo parallax" data-src="img/espaco-treinamento.jpg" data-label="Espaço de treinamento">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+            <span class="photo-label">Espaço de treinamento</span>
+          </div>
+          <figcaption>Espaço de treinamento</figcaption>
+        </figure>
+        <figure class="fx-photo reveal" style="--d:.12s">
+          <div class="photo parallax" data-src="img/aula-turma.jpg" data-label="Pessoas treinando em turma reduzida">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+            <span class="photo-label">Turmas reduzidas em aula</span>
+          </div>
+          <figcaption>Turmas reduzidas em aula</figcaption>
+        </figure>
+        <figure class="fx-photo reveal" style="--d:.19s">
+          <div class="photo parallax" data-src="img/professor-acompanhando.jpg" data-label="Professor acompanhando a execução">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+            <span class="photo-label">Professor acompanhando a execução</span>
+          </div>
+          <figcaption>Acompanhamento de perto</figcaption>
+        </figure>
+        <figure class="fx-photo reveal" style="--d:.26s">
+          <div class="photo parallax" data-src="img/equipamentos.jpg" data-label="Equipamentos organizados">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+            <span class="photo-label">Equipamentos</span>
+          </div>
+          <figcaption>Equipamentos</figcaption>
+        </figure>
+        <figure class="fx-photo reveal" style="--d:.33s">
+          <div class="photo parallax" data-src="img/ambiente-studio.jpg" data-label="Ambiente do Studio">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+            <span class="photo-label">Ambiente do Studio</span>
+          </div>
+          <figcaption>Ambiente tranquilo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="professor">
+    <div class="container">
+      <div class="section-head reveal" style="--d:.05s">
+        <span class="sec-badge">Professor Breno</span>
+        <h2 class="sec-title">Acompanhamento de verdade começa com alguém prestando atenção em você.</h2>
+      </div>
+
+      <article class="prof-card reveal">
+        <div class="fx-photo prof-photo">
+          <div class="photo" data-src="img/professor-breno.png" data-label="Professor Breno — Studio de Saúde">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-4.35-4.35a2 2 0 0 0-2.83 0L5 19"/></svg>
+            <span class="photo-label">Foto: Professor Breno</span>
+          </div>
+        </div>
+        <div class="prof-copy">
+          <h3>Professor Breno</h3>
+          <p class="prof-role">Responsável pelo Studio de Saúde · Desde 2021</p>
+          <p class="prof-desc">
+            No Studio de Saúde, o acompanhamento acontece de perto. Durante o treino, Breno observa movimentos, orienta exercícios e adapta a atividade sempre que necessário.
+          </p>
+          <ul class="prof-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Observa seus movimentos ao longo do treino
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Orienta cada exercício de forma individual
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Adapta a atividade sempre que necessário
+            </li>
+          </ul>
+          <p class="prof-idea">A ideia é simples: você nunca precisa se sentir perdido durante o treino.</p>
+          <a class="btn btn-primary" data-wa href="https://wa.me/">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Conhecer a proposta
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="comofunciona">
+    <div class="container">
+      <div class="section-head reveal" style="--d:.05s">
+        <span class="sec-badge">Como funciona</span>
+        <h2 class="sec-title">Um caminho simples para começar.</h2>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal" style="--d:.1s" data-n="01">
+          <h3>Agende sua aula experimental</h3>
+          <p>Entre em contato pelo WhatsApp e escolha o melhor horário.</p>
+        </article>
+        <article class="step reveal" style="--d:.2s" data-n="02">
+          <h3>Conheça o Studio</h3>
+          <p>Entenda como funciona o acompanhamento e experimente uma aula.</p>
+        </article>
+        <article class="step reveal" style="--d:.3s" data-n="03">
+          <h3>Comece no seu ritmo</h3>
+          <p>A partir das suas necessidades, o treinamento é conduzido de forma personalizada.</p>
+        </article>
+      </div>
+
+      <div class="center reveal">
+        <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Agendar aula experimental
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final" id="contato">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="container cta-inner">
+      <span class="sec-badge sec-badge-light reveal">Agende sua aula experimental</span>
+      <h2 class="reveal">Talvez você não precise de outra academia.<br>Talvez precise de uma <em>forma diferente de treinar</em>.</h2>
+      <p class="reveal" style="--d:.1s">
+        Conheça o Studio de Saúde e descubra como é treinar com horário marcado, poucas pessoas e acompanhamento próximo.
+      </p>
+      <div class="cta-btn reveal" style="--d:.2s">
+        <a class="btn btn-cta btn-xl" data-wa href="https://wa.me/">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Agendar minha aula experimental
+        </a>
+      </div>
+      <div class="cta-address reveal" style="--d:.3s">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p><strong>Natal/RN</strong><br>Av. Nascimento de Castro, 2032, loja 06 — Natal, Rio Grande do Norte</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#topo">
+          <img class="brand-logo" src="img/logo.png" alt="Studio de Saúde">
+        </a>
+        <p class="footer-tagline">Academia para quem não gosta de academia. Acompanhamento próximo, turmas reduzidas e horário agendado em Natal/RN.</p>
+      </div>
+      <div class="footer-info">
+        <h4>Onde estamos</h4>
+        <p>Av. Nascimento de Castro, 2032, loja 06<br>Natal — Rio Grande do Norte</p>
+      </div>
+      <div class="footer-info">
+        <h4>Aula experimental</h4>
+        <p>Agende pelo WhatsApp e escolha o melhor horário para conhecer o Studio.</p>
+        <a class="footer-wa" data-wa href="https://wa.me/">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Studio de Saúde — Academia Personalizada. Todos os direitos reservados.</p>
+      <p>Natal/RN · Desde 2021</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa href="https://wa.me/" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<div class="mobile-cta" id="mobileCta">
+  <a class="btn btn-primary" data-wa href="https://wa.me/">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Agendar aula experimental
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
