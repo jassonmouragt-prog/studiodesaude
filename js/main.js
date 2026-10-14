@@ -94,7 +94,7 @@
     });
 
     if (window.Lenis) {
-      var lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
+      var lenis = new Lenis({ lerp: 0.14, smoothWheel: true });
       lenis.on("scroll", ScrollTrigger.update);
       gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
       gsap.ticker.lagSmoothing(0);
@@ -106,7 +106,7 @@
             var target = document.querySelector(id);
             if (target) {
               e.preventDefault();
-              lenis.scrollTo(target, { offset: -88, duration: 1.4 });
+              lenis.scrollTo(target, { offset: -88, duration: 1.2 });
             }
           }
         });
