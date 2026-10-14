@@ -24,6 +24,8 @@
     var photos = document.querySelectorAll(".photo[data-src]");
     for (var i = 0; i < photos.length; i++) {
       (function (el) {
+        el.setAttribute("role", "img");
+        el.setAttribute("aria-label", el.getAttribute("data-label"));
         var img = new Image();
         img.onload = function () {
           el.style.backgroundImage = 'url("' + el.getAttribute("data-src") + '")';
@@ -52,7 +54,10 @@
         }
       });
     }, { threshold: 0.14, rootMargin: "0px 0px -6% 0px" });
-    for (var k = 0; k < items.length; k++) io.observe(items[k]);
+    for (var k = 0; k < items.length; k++) {
+      items[k].classList.add("is-pending");
+      io.observe(items[k]);
+    }
   }
 
   function initParallax() {
@@ -95,15 +100,28 @@
     var toggle = document.getElementById("menuToggle");
     var nav = document.getElementById("siteNav");
     if (!toggle || !nav) return;
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("open");
+    toggle.closest(".site-header").classList.add("menu-ready");
+    function setOpen(open) {
+      nav.classList.toggle("open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    }
+    toggle.addEventListener("click", function () {
+      setOpen(!nav.classList.contains("open"));
     });
     nav.addEventListener("click", function (e) {
       if (e.target.tagName === "A") {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
+        setOpen(false);
       }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("open")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
     });
   }
 
