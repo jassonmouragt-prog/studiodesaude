@@ -427,18 +427,28 @@ section { scroll-margin-top: 96px; }
   gap: 24px;
 }
 
-.card {
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.card, .step {
   background: linear-gradient(180deg, #ffffff 0%, #f4f9fd 100%) padding-box, linear-gradient(135deg, rgba(46, 143, 232, .45), rgba(22, 101, 184, .16)) border-box;
   border: 1px solid transparent;
   border-radius: var(--radius);
   padding: 32px;
   box-shadow: 0 1px 2px rgba(10, 42, 71, .03);
   transition: transform .35s ease, box-shadow .35s ease;
+  animation: float-slow 7s ease-in-out infinite;
 }
-.card:hover {
+.card:nth-child(even), .step:nth-child(even) {
+  animation-delay: -3.5s;
+}
+.card:hover, .step:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
   background: linear-gradient(180deg, #ffffff 0%, #eef5fc 100%) padding-box, linear-gradient(135deg, #2e8fe8, #1665b8) border-box;
+  animation-play-state: paused;
 }
 .card h3 {
   font-size: 18px;
@@ -760,11 +770,14 @@ section { scroll-margin-top: 96px; }
   padding: 36px 32px;
   overflow: hidden;
   transition: transform .35s ease, box-shadow .35s ease;
+  animation: float-slow 7s ease-in-out infinite;
 }
+.step:nth-child(even) { animation-delay: -3.5s; }
 .step:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
   background: linear-gradient(180deg, #ffffff 0%, #eef5fc 100%) padding-box, linear-gradient(135deg, #2e8fe8, #1665b8) border-box;
+  animation-play-state: paused;
 }
 .step::before {
   content: attr(data-n);
