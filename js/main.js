@@ -86,32 +86,12 @@
 
     gsap.utils.toArray(".parallax").forEach(function (el) {
       var trigger = el.closest(".fx-photo") || el.parentElement;
-      gsap.fromTo(el, { yPercent: -12 }, {
-        yPercent: 12,
+      gsap.fromTo(el, { yPercent: -10 }, {
+        yPercent: 10,
         ease: "none",
-        scrollTrigger: { trigger: trigger, start: "top bottom", end: "bottom top", scrub: 0.4 }
+        scrollTrigger: { trigger: trigger, start: "top bottom", end: "bottom top", scrub: true }
       });
     });
-
-    if (window.Lenis) {
-      var lenis = new Lenis({ lerp: 0.18, smoothWheel: true });
-      lenis.on("scroll", ScrollTrigger.update);
-      gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
-      gsap.ticker.lagSmoothing(0);
-      document.documentElement.style.scrollBehavior = "auto";
-      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-        a.addEventListener("click", function (e) {
-          var id = a.getAttribute("href");
-          if (id.length > 1) {
-            var target = document.querySelector(id);
-            if (target) {
-              e.preventDefault();
-              lenis.scrollTo(target, { offset: -88, duration: 1 });
-            }
-          }
-        });
-      });
-    }
 
     var header = document.querySelector(".site-header");
     ScrollTrigger.create({
