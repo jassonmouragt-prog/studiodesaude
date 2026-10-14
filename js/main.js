@@ -22,78 +22,91 @@
 
   function loadPhotos() {
     var photos = document.querySelectorAll(".photo[data-src]");
+    var loaded = 0;
     for (var i = 0; i < photos.length; i++) {
       (function (el) {
+        var img = new Image();
         el.setAttribute("role", "img");
         el.setAttribute("aria-label", el.getAttribute("data-label"));
-        var img = new Image();
         img.onload = function () {
           el.style.backgroundImage = 'url("' + el.getAttribute("data-src") + '")';
           el.classList.add("is-loaded");
+          loaded += 1;
+          if (loaded === photos.length && window.ScrollTrigger) ScrollTrigger.refresh();
         };
         img.src = el.getAttribute("data-src");
       })(photos[i]);
     }
   }
 
-  function initReveal() {
-    var items = document.querySelectorAll(".reveal");
-    if (reduceMotion) {
-      for (var i = 0; i < items.length; i++) items[i].classList.add("is-visible");
-      return;
-    }
-    if (!("IntersectionObserver" in window)) {
-      for (var j = 0; j < items.length; j++) items[j].classList.add("is-visible");
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          io.unobserve(entry.target);
-        }
+  function reveal(selector) {
+    gsap.utils.toArray(selector).forEach(function (el) {
+      gsap.fromTo(el, { y: 34, opacity: 0 }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        ease: "power3.out",
+        scrollTrigger: { trigger: el, start: "top 88%", once: true }
       });
-    }, { threshold: 0.14, rootMargin: "0px 0px -6% 0px" });
-    for (var k = 0; k < items.length; k++) {
-      items[k].classList.add("is-pending");
-      io.observe(items[k]);
-    }
+    });
   }
 
-  function initParallax() {
-    if (reduceMotion || !("IntersectionObserver" in window)) return;
-    var targets = document.querySelectorAll(".fx-photo .parallax");
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          window.addEventListener("scroll", rafTick, { passive: true });
-          window.addEventListener("resize", rafTick, { passive: true });
-          rafTick();
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.02 });
-    for (var i = 0; i < targets.length; i++) io.observe(targets[i]);
+  function initMotion() {
+    if (reduceMotion || !window.gsap || !window.ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
 
-    var ticking = false;
-    function rafTick() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(function () {
-        for (var j = 0; j < targets.length; j++) applyParallax(targets[j]);
-        ticking = false;
-      });
-    }
+    var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    heroTl
+      .from(".hero-copy > *", { y: 36, opacity: 0, duration: 1.05, stagger: 0.13 }, 0.15)
+      .from(".hero-media", { y: 48, opacity: 0, duration: 1.15 }, 0.4)
+      .from(".hero-badge", { opacity: 0, duration: 0.8 }, 1);
 
-    function applyParallax(el) {
-      var rect = el.getBoundingClientRect();
-      var vh = window.innerHeight || document.documentElement.clientHeight;
-      if (rect.bottom < 0 || rect.top > vh) return;
-      var center = rect.top + rect.height / 2;
-      var offset = (vh / 2 - center) * -0.035;
-      offset = Math.max(-18, Math.min(18, offset));
-      el.style.transform = "translateY(" + offset.toFixed(1) + "px) scale(1.1)";
-    }
+    reveal(".section-head");
+    reveal(".feature-grid .card");
+    reveal(".audience-grid .card");
+    reveal(".audience-feature");
+    reveal(".testimonial-featured");
+    reveal(".tgrid .tcard");
+    reveal(".emotion-copy > *");
+    reveal(".prof-card");
+    reveal(".steps .step");
+    reveal(".cta-inner > *");
+    reveal(".footer-grid");
+    reveal(".footer-bottom");
+
+    gsap.utils.toArray(".mosaic figure").forEach(function (fig) {
+      gsap.fromTo(fig, { clipPath: "inset(10% 5% 10% 5% round 20px)", opacity: 0 }, {
+        clipPath: "inset(0% 0% 0% 0% round 20px)",
+        opacity: 1,
+        duration: 1.15,
+        ease: "power3.inOut",
+        scrollTrigger: { trigger: fig, start: "top 86%", once: true }
+      });
+    });
+
+    gsap.utils.toArray(".parallax").forEach(function (el) {
+      var trigger = el.closest(".fx-photo") || el.parentElement;
+      gsap.fromTo(el, { yPercent: -6 }, {
+        yPercent: 6,
+        ease: "none",
+        scrollTrigger: { trigger: trigger, start: "top bottom", end: "bottom top", scrub: 0.6 }
+      });
+    });
+
+    var header = document.querySelector(".site-header");
+    ScrollTrigger.create({
+      start: 0,
+      end: "max",
+      onUpdate: function (self) {
+        var y = self.scroll();
+        header.classList.toggle("is-hidden", y > 420 && self.direction === 1);
+        header.classList.toggle("is-scrolled", y > 32);
+      }
+    });
+
+    window.addEventListener("load", function () {
+      ScrollTrigger.refresh();
+    });
   }
 
   function initMenu() {
@@ -110,9 +123,7 @@
       setOpen(!nav.classList.contains("open"));
     });
     nav.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
-        setOpen(false);
-      }
+      if (e.target.tagName === "A") setOpen(false);
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && nav.classList.contains("open")) {
@@ -148,8 +159,7 @@
   }
 
   loadPhotos();
-  initReveal();
-  initParallax();
+  initMotion();
   initMenu();
   initMobileCta();
   initYear();

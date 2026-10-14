@@ -11,7 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='18' fill='%230a2a47'/%3E%3Cpath d='M32 46c-8-5.5-15-11-15-18.5C17 20.5 21 17 26 17c3.2 0 5.4 1.6 6 4.4h0c.6-2.8 2.8-4.4 6-4.4 5 0 9 3.5 9 10.5C47 35 40 40.5 32 46z' fill='%232e8fe8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Lora:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -406,6 +406,14 @@
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <p><strong>Natal/RN</strong><br>Av. Nascimento de Castro, 2032, loja 06 — Natal, Rio Grande do Norte</p>
       </div>
+      <div class="map-wrap reveal" style="--d:.4s">
+        <iframe
+          title="Mapa — Studio de Saúde em Natal/RN"
+          src="https://www.google.com/maps?q=Av.%20Nascimento%20de%20Castro%2C%202032%2C%20Natal%2C%20RN%2C%20Brasil&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
@@ -451,6 +459,8 @@
   </a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
