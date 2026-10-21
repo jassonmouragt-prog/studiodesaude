@@ -2,7 +2,7 @@
   "use strict";
 
   var CONFIG = {
-    whatsappNumber: "5584999999999",
+    whatsappNumber: "5584998448455",
     whatsappMessage: "Olá, conheci o Studio de Saúde pelo site e gostaria de saber como funciona a aula experimental."
   };
 
