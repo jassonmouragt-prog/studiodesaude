@@ -22,20 +22,40 @@
 
   function loadPhotos() {
     var photos = document.querySelectorAll(".photo[data-src]");
-    var loaded = 0;
+    var observer = "IntersectionObserver" in window
+      ? new IntersectionObserver(function (entries, currentObserver) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            loadPhoto(entry.target, false);
+            currentObserver.unobserve(entry.target);
+          });
+        }, { rootMargin: "400px 0px" })
+      : null;
+
+    function loadPhoto(el, isHero) {
+      var img = new Image();
+      var src = el.getAttribute("data-src");
+      el.setAttribute("role", "img");
+      el.setAttribute("aria-label", el.getAttribute("data-label"));
+      img.fetchPriority = isHero ? "high" : "low";
+      img.onload = function () {
+        el.style.backgroundImage = 'url("' + src + '")';
+        el.classList.add("is-loaded");
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      };
+      img.src = src;
+    }
+
     for (var i = 0; i < photos.length; i++) {
-      (function (el) {
-        var img = new Image();
+      var el = photos[i];
+      var isHero = !!el.closest(".hero-media");
+      if (isHero || !observer) {
+        loadPhoto(el, isHero);
+      } else {
         el.setAttribute("role", "img");
         el.setAttribute("aria-label", el.getAttribute("data-label"));
-        img.onload = function () {
-          el.style.backgroundImage = 'url("' + el.getAttribute("data-src") + '")';
-          el.classList.add("is-loaded");
-          loaded += 1;
-          if (loaded === photos.length && window.ScrollTrigger) ScrollTrigger.refresh();
-        };
-        img.src = el.getAttribute("data-src");
-      })(photos[i]);
+        observer.observe(el);
+      }
     }
   }
 
