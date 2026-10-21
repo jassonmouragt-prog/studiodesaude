@@ -35,12 +35,12 @@ Site estático de página única para a academia **Studio de Saúde** (Natal/RN)
 - Links `[data-wa]` recebem href/target/rel via JS.
 - Número e mensagem em `CONFIG` no topo de `js/main.js` (`whatsappNumber`, `whatsappMessage`) — editar ali.
 
-## Imagens pendentes (usadas como fallback)
+## Fotos do espaço e das aulas
 
-As seguintes tensões `data-src` ainda referenciam arquivos `jpg` que NÃO existem em `img/`: `aula-real.jpg`, `espaco-treinamento.jpg`, `aula-turma.jpg`, `professor-acompanhando.jpg`, `equipamentos.jpg`, `ambiente-studio.jpg`. Para que apareçam, colocar os arquivos em `img/` com esses nomes.
+As seis fotos em `img/` (`aula-real.jpg`, `espaco-treinamento.jpg`, `aula-turma.jpg`, `professor-acompanhando.jpg`, `equipamentos.jpg`, `ambiente-studio.jpg`) foram selecionadas do pacote enviado em `Imagens/`. A pasta `Imagens/` guarda os originais e não entra no Git nem no deploy.
 
 ## Deploy
 
 - Vercel (CLI `vercel --prod`), projeto `studiodesaude`
 - URL de produção: https://studiodesaude.vercel.app
-- `.vercelignore` exclui `.opencode` e `node_modules`
+- `.vercelignore` exclui `.opencode`, `node_modules` e a pasta `Imagens`
